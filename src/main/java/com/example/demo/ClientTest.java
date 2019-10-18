@@ -50,7 +50,9 @@ public class ClientTest {
         /**
          * 3、发起主调用并打印
          */
-        System.out.println(gatewaySofaService.action(cityCode,chnnelCode,tranCode,body,params));
+        Object o = gatewaySofaService.action(cityCode,chnnelCode,tranCode,body,params);
+        String ret = new String((byte[]) o);
+        System.out.println(ret);
     }
 }
 
