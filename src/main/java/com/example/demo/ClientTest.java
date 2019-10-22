@@ -27,7 +27,7 @@ public class ClientTest {
          */
         String cityCode = "04320"; //城市码
         String chnnelCode = "07"; //渠道码
-        String tranCode = "B70001"; // 交易码/事件码，对应为登录的事件码
+        String proId = "0"; // 交易码/事件码，对应为登录的事件码
         String body = "{\n" +
                 "\"data\":{\n" +
                 " \"common\": {\n" +
@@ -50,7 +50,7 @@ public class ClientTest {
         /**
          * 3、发起主调用并打印
          */
-        Object o = gatewaySofaService.action(cityCode,chnnelCode,tranCode,body,params);
+        Object o = gatewaySofaService.action(cityCode,chnnelCode,proId,body,params);
         String ret = new String((byte[]) o);
         System.out.println(ret);
     }
