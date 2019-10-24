@@ -1,10 +1,8 @@
 package com.example.demo;
 
-import com.alibaba.fastjson.JSONObject;
-import com.wish.techmidplat.gataway.sdk.utils.HttpClientUtil;
-import com.wish.techmidplat.gataway.sdk.utils.impl.HttpClientPostUtil;
-import com.wish.techmidplat.gateway.model.SDKKey;
-import com.wish.techmidplat.gateway.model.SDKParams;
+import com.wish.techmidplat.gateway.sdk.model.SDKKey;
+import com.wish.techmidplat.gateway.sdk.model.SDKParams;
+import com.wish.techmidplat.gateway.sdk.utils.HttpClientUtil;
 
 /**
  * @author: QUAN

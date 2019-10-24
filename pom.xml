@@ -33,14 +33,14 @@
 		</dependency>
 		<!--引入api包，进行sofa调用-->
 		<dependency>
-			<groupId>com.wish.techmidplat.gataway</groupId>
-			<artifactId>techmidplat-gataway-interface</artifactId>
+			<groupId>com.wish.techmidplat.gateway</groupId>
+			<artifactId>techmidplat-gateway-interface</artifactId>
 			<version>${gatewayversion}</version>
 		</dependency>
 		<!--引入sdk包，主要包括封装httpClient和加解密等-->
 		<dependency>
-			<groupId>com.wish.techmidplat.gataway</groupId>
-			<artifactId>techmidplat-gataway-SDK</artifactId>
+			<groupId>com.wish.techmidplat.gateway</groupId>
+			<artifactId>techmidplat-gateway-sdk</artifactId>
 			<version>${gatewayversion}</version>
 		</dependency>
 	</dependencies>
