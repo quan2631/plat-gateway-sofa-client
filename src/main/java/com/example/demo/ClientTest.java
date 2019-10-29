@@ -39,7 +39,7 @@ public class ClientTest {
                 " \"plat\": {\n" +
                 "  \"login\": {\n" +
                 "   \"loginId\": \"001\",\n" +
-                "   \"password\": \"HX01123\",\n" +
+                "   \"password\": \"123\",\n" +
                 "   \"loginType\": 0\n" +
                 "  }\n" +
                 " }\n" +
