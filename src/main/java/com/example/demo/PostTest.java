@@ -7,10 +7,10 @@ import com.wish.techmidplat.gateway.sdk.utils.HttpClientUtil;
 /**
  * @author: QUAN
  * @date: Created in 2019/10/22 14:12
- * @description: sdk客户端使用，测试用例方法
+ * @description: SDK 加解密 Post 调用测试
  * @modified By:
  */
-public class ClientTest3 {
+public class PostTest {
     public static void main(String[] args) {
 
         String body = "{\n" +
@@ -24,7 +24,7 @@ public class ClientTest3 {
                 " \"plat\": {\n" +
                 "  \"login\": {\n" +
                 "   \"loginId\": \"001\",\n" +
-                "   \"password\": \"HX01123\",\n" +
+                "   \"password\": \"123\",\n" +
                 "   \"loginType\": 0\n" +
                 "  }\n" +
                 " }\n" +
@@ -46,6 +46,7 @@ public class ClientTest3 {
         key.setIv("UISwD9fW6cFh9SNS");
         key.setPrik("ce/2iZsuhncEfhZNp0N1aNBOvATN7DEWGNhNBYsGq3A=");
         key.setUserId("ALICE123@YAHOO.COM");
+        key.setNeedSecret(true); // 设置是否加密
 
         HttpClientUtil util = HttpClientUtil.getInstance();
         try {

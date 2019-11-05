@@ -12,7 +12,7 @@ import java.util.Map;
  * @description: 网关程序，提供sofa服务。此处，编写客户端进行调用。
  * @modified By:
  */
-public class ClientTest {
+public class MainSofaTest {
     public static void main(String[] args) {
         /**
          * 1、生成代理类
