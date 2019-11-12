@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.gateway;
 
 import com.wish.techmidplat.gateway.sdk.model.SDKKey;
 import com.wish.techmidplat.gateway.sdk.utils.HttpClientUtil;
@@ -12,7 +12,7 @@ import java.util.Map;
  * @description: SDK 加解密 Get 调用测试
  * @modified By:
  */
-public class GetTest {
+public class GatewayGet {
     public static void main(String[] args) {
 
         Map<String, String> params = new HashMap<>();

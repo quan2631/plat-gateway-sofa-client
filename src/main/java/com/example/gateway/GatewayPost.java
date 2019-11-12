@@ -1,7 +1,6 @@
-package com.example.demo;
+package com.example.gateway;
 
 import com.wish.techmidplat.gateway.sdk.model.SDKKey;
-import com.wish.techmidplat.gateway.sdk.model.SDKParams;
 import com.wish.techmidplat.gateway.sdk.utils.HttpClientUtil;
 
 /**
@@ -10,7 +9,7 @@ import com.wish.techmidplat.gateway.sdk.utils.HttpClientUtil;
  * @description: SDK 加解密 Post 调用测试
  * @modified By:
  */
-public class PostTest {
+public class GatewayPost {
     public static void main(String[] args) {
 
         String body = "{\n" +
@@ -31,15 +30,6 @@ public class PostTest {
                 " }\n" +
                 "}"; //表单体
 
-
-        SDKParams params = new SDKParams();
-        params.setProId("0");
-        params.setCityCode("04320");
-        params.setChannelCode("07");
-        params.setBody(body);
-        params.setParams("gateway,04320,07,B70001,arrange,newBusiness,1233333");
-
-
         SDKKey key = new SDKKey();
         key.setSecretKey("abcdedfg12345678");
         key.setHexString(false);
@@ -50,7 +40,7 @@ public class PostTest {
 
         HttpClientUtil util = HttpClientUtil.getInstance();
         try {
-            Object ret = util.post("http://127.0.0.1:8000/sdk/rest/action",params,key);
+            Object ret = util.post("http://127.0.0.1:8000/gateway/04320/07/B70001/arrange/newBusiness/1233333",body,key);
             System.out.println(ret);
         } catch (Exception e) {
             e.printStackTrace();

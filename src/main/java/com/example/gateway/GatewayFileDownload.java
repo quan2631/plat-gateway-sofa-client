@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.gateway;
 
 import com.wish.techmidplat.gateway.sdk.model.SDKFileResponse;
 import com.wish.techmidplat.gateway.sdk.model.SDKKey;
@@ -13,28 +13,24 @@ import java.io.InputStream;
 /**
  * @author: QUAN
  * @date: Created in 2019/11/6 14:10
- * @description: 文件下载 （文件服务器）
+ * @description: 文件下载 （走网关）
  * @modified By:
  */
-public class FileDownloadTest {
+public class GatewayFileDownload {
 
-    public static final int cache = 10 * 1024;
+    public static final int byteArrCache = 10 * 1024;
 
     public static void main(String[] args) {
 
-        String reqUrl ="http://172.29.12.55:8000/plat-filestore/download";
+        String reqUrl ="http://127.0.0.1:8000/gateway/04320/07/A00002/plat-filestore/download";
 
         String[] ids = new String[2];
         ids[0] = "group1/M00/05/DC/rB0MN13JJXiAa0-VAAAABbIS0lY595.txt";
         ids[1] = "group1/M00/05/DC/rB0MN13JJXiAZq1cAAAABmo1faA047.txt";
 
         SDKKey key = new SDKKey();
-        key.setSecretKey("abcdedfg12345678");
-        key.setHexString(false);
-        key.setIv("UISwD9fW6cFh9SNS");
         key.setPrik("ce/2iZsuhncEfhZNp0N1aNBOvATN7DEWGNhNBYsGq3A=");
         key.setUserId("ALICE123@YAHOO.COM");
-        key.setNeedSecret(true); // 设置是否加密
 
         HttpClientUtil util = HttpClientUtil.getInstance();
         try {
@@ -47,7 +43,6 @@ public class FileDownloadTest {
             InputStream is = response.getInputStream();
             // 本地测试生成文件
             createFile(filepath, is);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -62,7 +57,7 @@ public class FileDownloadTest {
         /**
          * 根据实际运行效果 设置缓冲区大小
          */
-        byte[] buffer = new byte[cache];
+        byte[] buffer = new byte[byteArrCache];
         int ch = 0;
         while ((ch = is.read(buffer)) != -1) {
             fileout.write(buffer, 0, ch);
