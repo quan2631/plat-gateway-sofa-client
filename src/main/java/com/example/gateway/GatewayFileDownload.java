@@ -27,6 +27,8 @@ public class GatewayFileDownload {
         String[] ids = new String[2];
         ids[0] = "group1/M00/05/DC/rB0MN13JJXiAa0-VAAAABbIS0lY595.txt";
         ids[1] = "group1/M00/05/DC/rB0MN13JJXiAZq1cAAAABmo1faA047.txt";
+        // ids[2] = "group1/M00/05/DD/rB0MN13LsneAcr6wAATe_vZioto512.pdf"; // 中文测试
+
 
         SDKKey key = new SDKKey();
         key.setPrik("ce/2iZsuhncEfhZNp0N1aNBOvATN7DEWGNhNBYsGq3A=");
