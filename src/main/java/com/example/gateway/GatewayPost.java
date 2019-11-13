@@ -37,6 +37,7 @@ public class GatewayPost {
         key.setPrik("ce/2iZsuhncEfhZNp0N1aNBOvATN7DEWGNhNBYsGq3A=");
         key.setUserId("ALICE123@YAHOO.COM");
         key.setNeedSecret(true); // 设置是否加密
+        key.setAppId("app_id_test");
 
         HttpClientUtil util = HttpClientUtil.getInstance();
         try {

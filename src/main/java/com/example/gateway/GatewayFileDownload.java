@@ -31,6 +31,7 @@ public class GatewayFileDownload {
         SDKKey key = new SDKKey();
         key.setPrik("ce/2iZsuhncEfhZNp0N1aNBOvATN7DEWGNhNBYsGq3A=");
         key.setUserId("ALICE123@YAHOO.COM");
+        key.setAppId("app_id_sign");
 
         HttpClientUtil util = HttpClientUtil.getInstance();
         try {
