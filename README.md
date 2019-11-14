@@ -1,8 +1,10 @@
 # plat-gateway-sofa-client
 ```
-此工程针对网关发布的sofa服务进行验证
+此工程包括两个部分：
+第一针对网关发布的sofa服务进行验证；第二网关提供的SDK进行验证
 ```
-# 1. 引入相关jar
+# A部分：sofa服务验证示例
+## 1. 引入相关jar
 ```
 <!--sofa 客户端调用-->
 <dependency>
@@ -17,43 +19,31 @@
   <version>${gatewayversion}</version>
 </dependency>
 ```
-# 2. 执行ClientTest类的main方法
+## 2. 执行ClientTest类的main方法
 ```
-/**
- * 1、生成代理类
- */
-ConsumerConfig<ISofa> consumerConfig = new ConsumerConfig<ISofa>()
-        .setInterfaceId(ISofa.class.getName()) // 指定接口
-        .setProtocol("bolt") // 指定协议
-        .setDirectUrl("bolt://127.0.0.1:12300"); // 指定直连地址
-ISofa gatewaySofaService = consumerConfig.refer();
-/**
- * 2、构造登录需要的参数
- */
-String cityCode = "04320"; //城市码
-String chnnelCode = "07"; //渠道码
-String tranCode = "B70001"; // 交易码/事件码，对应为登录的事件码
-String body = "{\n" +
-        "\"data\":{\n" +
-        " \"common\": {\n" +
-        "  \"retimestamp\": 1567593358964,\n" +
-        "  \"channelseq\": \"\",\n" +
-        "  \"eventCode\": \"B70001\",\n" +
-        "  \"businessCode\": \"B70001\"\n" +
-        " },\n" +
-        " \"plat\": {\n" +
-        "  \"login\": {\n" +
-        "   \"loginId\": \"001\",\n" +
-        "   \"password\": \"HX01123\",\n" +
-        "   \"loginType\": 0\n" +
-        "  }\n" +
-        " }\n" +
-        " }\n" +
-        "}"; //表单体
-String[] params = new String[]{"gateway","04320","07","B70001",
-        "arrange", "newBusiness", "1233333"};
-/**
- * 3、发起主调用并打印
- */
-System.out.println(gatewaySofaService.action(cityCode,chnnelCode,tranCode,body,params));
+
+```
+# B部分：sdk相关验证
+## 1. 功能描述
+```
+Get调用：入参做签名、返回值加解密
+Post调用：入参做签名、入参加密、返回值加密
+文件上传：入参做签名、返回值不加密
+文件下载：入参做签名、返回值不加密
+```
+## 2. 引入相关jar
+```
+<!--引入sdk包，主要包括封装httpClient和加解密等-->
+<dependency>
+  <groupId>com.wish.techmidplat.gateway</groupId>
+  <artifactId>techmidplat-gateway-sdk</artifactId>
+  <version>${gatewayversion}</version>
+</dependency>
+```
+## 3. 示例代码位置，执行main方法
+```
+Get调用：com.example.gateway.GatewayGet
+Post调用：com.example.gateway.GatewayPost
+文件上传：com.example.gateway.GatewayFileUpload
+文件下载：com.example.gateway.GatewayFileDownload
 ```
