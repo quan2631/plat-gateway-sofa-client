@@ -25,8 +25,8 @@ public class GatewayFileDownload {
         String reqUrl ="http://127.0.0.1:8000/gateway/04320/07/A00002/plat-filestore/download";
 
         String[] ids = new String[2];
-        ids[0] = "group1/M00/05/DC/rB0MN13JJXiAa0-VAAAABbIS0lY595.txt";
-        ids[1] = "group1/M00/05/DC/rB0MN13JJXiAZq1cAAAABmo1faA047.txt";
+        ids[0] = "group1/M00/05/14/rB0MN13ObqeAbVd0AAAABbIS0lY428.txt";
+        ids[1] = "group1/M00/05/14/rB0MN13ObqeARM8oAAAABmo1faA800.txt";
         // ids[2] = "group1/M00/05/DD/rB0MN13LsneAcr6wAATe_vZioto512.pdf"; // 中文测试
 
 
