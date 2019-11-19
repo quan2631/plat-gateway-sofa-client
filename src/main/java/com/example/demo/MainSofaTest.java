@@ -22,7 +22,7 @@ public class MainSofaTest {
         /**
          * 3、发起主调用并打印
          */
-        Object o = gatewaySofaService.action("1","2","3");
+        Object o = gatewaySofaService.actionStr("1","2","3");
         System.out.println(o); // you input cityCode is 1
     }
 }
