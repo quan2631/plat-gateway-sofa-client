@@ -25,26 +25,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-		<!--sofa 客户端调用-->
-		<dependency>
-			<groupId>com.alipay.sofa</groupId>
-			<artifactId>sofa-rpc-all</artifactId>
-			<version>5.6.0</version>
-		</dependency>
-		<!--引入api包，进行sofa调用-->
-		<dependency>
-			<groupId>com.wish.techmidplat.gateway</groupId>
-			<artifactId>techmidplat-gateway-interface</artifactId>
-			<version>${gatewayversion}</version>
-		</dependency>
-		<!--引入sdk包，主要包括封装httpClient和加解密等-->
+		<!--引入sdk包，主要包括封装httpClient、加解密和sofa服务获取-->
 		<dependency>
 			<groupId>com.wish.techmidplat.gateway</groupId>
 			<artifactId>techmidplat-gateway-sdk</artifactId>
 			<version>${gatewayversion}</version>
 		</dependency>
+		<!-- 发布为一个web应用 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
