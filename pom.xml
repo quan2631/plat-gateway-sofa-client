@@ -25,10 +25,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-		<!--引入sdk包，主要包括封装httpClient、加解密和sofa服务获取-->
+		<!--引入sdk包，主要包括封装httpClient、加解密-->
 		<dependency>
 			<groupId>com.wish.techmidplat.gateway</groupId>
 			<artifactId>techmidplat-gateway-sdk</artifactId>
+			<version>${gatewayversion}</version>
+		</dependency>
+		<!--引入api包，测试调用的sofa服务-->
+		<dependency>
+			<groupId>com.wish.techmidplat.gateway</groupId>
+			<artifactId>techmidplat-gateway-api</artifactId>
 			<version>${gatewayversion}</version>
 		</dependency>
 		<!-- 发布为一个web应用 -->
