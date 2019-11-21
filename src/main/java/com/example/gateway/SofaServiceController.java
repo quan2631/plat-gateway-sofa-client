@@ -47,6 +47,6 @@ public class SofaServiceController {
     @RequestMapping("/action1")
     private  String actionMap(){
         Map<String, Object> paramsMap = JSONObject.parseObject(logonBody,Map.class);
-        return  gatewaySofaApi.actionMap("B70001",paramsMap).toString();
+        return  gatewaySofaApi.actionMap("B70009",paramsMap).toString();
     }
 }
