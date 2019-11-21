@@ -26,8 +26,8 @@ public class SofaServiceController {
             "    \"common\": {\n" +
             "      \"retimestamp\": 1567593358964,\n" +
             "      \"channelseq\": \"\",\n" +
-            "      \"eventCode\": \"B70001\",\n" +
-            "      \"businessCode\": \"B70001\"\n" +
+            "      \"eventCode\": \"B70009\",\n" +
+            "      \"businessCode\": \"B70009\"\n" +
             "    },\n" +
             "    \"plat\": {\n" +
             "      \"login\": {\n" +
@@ -41,7 +41,7 @@ public class SofaServiceController {
 
     @RequestMapping("/action")
     private  String actionStr(){
-        return gatewaySofaApi.actionStr("B70001",logonBody);
+        return gatewaySofaApi.actionStr("B70009",logonBody);
     }
 
     @RequestMapping("/action1")
