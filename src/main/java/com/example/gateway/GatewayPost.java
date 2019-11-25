@@ -17,8 +17,8 @@ public class GatewayPost {
                 " \"common\": {\n" +
                 "  \"retimestamp\": 1567593358964,\n" +
                 "  \"channelseq\": \"\",\n" +
-                "  \"eventCode\": \"B70001\",\n" +
-                "  \"businessCode\": \"B70001\"\n" +
+                "  \"eventCode\": \"B70009\",\n" +
+                "  \"businessCode\": \"B70009\"\n" +
                 " },\n" +
                 " \"plat\": {\n" +
                 "  \"login\": {\n" +
@@ -41,7 +41,7 @@ public class GatewayPost {
 
         HttpClientUtil util = HttpClientUtil.getInstance();
         try {
-            Object ret = util.post("http://127.0.0.1:8000/gateway/04320/07/B70001/arrange/newBusiness/1233333",body,key);
+            Object ret = util.post("http://127.0.0.1:8000/gateway/04320/07/B70009/arrange/newBusiness/1233333",body,key);
             System.out.println(ret);
         } catch (Exception e) {
             e.printStackTrace();
